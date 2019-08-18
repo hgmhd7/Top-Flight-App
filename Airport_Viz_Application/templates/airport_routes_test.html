@@ -28,7 +28,7 @@
   <script src="https:cdn.jsdelivr.net/npm/globe.gl"></script>
   <!-- <script src="https://top/unpkg.com/globe.gl"></script> -->
   <!--<script src="../../dist/globe.gl.js"></script>-->
-  <link rel="stylesheet" href="assets/css/force_layout.css">
+  <link rel="stylesheet" href="static/css/force_layout.css">
 </head>
 
 <body>
@@ -40,14 +40,14 @@
         <div id="globeViz"></div>
 
       </div> -->
-<!-- <script>
+  <!-- <script>
       var delayInMilliseconds = 100000; //1 second
 
       setTimeout(function() {
         //your code to be executed after 1 second
       }, delayInMilliseconds);
     </script> -->
-      <!-- <div class="col-lg-2">
+  <!-- <div class="col-lg-2">
         <div id="scatter" class="sidebar"></div>
       </div>
     </div>
@@ -88,7 +88,7 @@
       .pointRadius(0.02)
       .pointsMerge(true);
 
-      
+
     // load data
     const airportParse = ([airportId, name, city, country, iata, icao, lat, lng, alt, timezone, dst, tz, type, source]) => ({ airportId, name, city, country, iata, icao, lat, lng, alt, timezone, dst, tz, type, source });
     const routeParse = ([airline, airlineId, srcIata, srcAirportId, dstIata, dstAirportId, codeshare, stops, equipment]) => ({ airline, airlineId, srcIata, srcAirportId, dstIata, dstAirportId, codeshare, stops, equipment });
@@ -107,8 +107,8 @@
           dstAirport: byIata[d.dstIata]
         }))
         .filter(d => d.srcAirport.country === COUNTRY && d.dstAirport.country !== COUNTRY); // international routes from country
-                
-          //  .filter(d => d.srcAirport.country); // international routes from country
+
+      //  .filter(d => d.srcAirport.country); // international routes from country
       console.log(routes.length)
       myGlobe
         .pointsData(airports)
@@ -122,9 +122,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
-  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="static/js/app.js"></script>
+  <script type="text/javascript" src="static/js/build_navigator.js"></script>
 
 </body>
 
 </html>
-
