@@ -1,4 +1,4 @@
-# Top-Flight
+# Top Flight
 
 This is a global study and visualization of correlations in airport ratings.  
 
